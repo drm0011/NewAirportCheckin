@@ -1,0 +1,29 @@
+﻿@page
+@model NewAirportCheckin.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Airport Check-In";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">Airport Check-In</h1>
+    <p class="text-center text-muted">Fill in your details to complete your check-in.</p>
+
+    <div class="card shadow mt-4">
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Passenger.PassengerName" class="form-label"></label>
+                    <input asp-for="Passenger.PassengerName" class="form-control" />
+                    <span asp-validation-for="Passenger.PassengerName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Passenger.FlightNumber" class="form-label"></label>
+                    <input asp-for="Passenger.FlightNumber" class="form-control" />
+                    <span asp-validation-for="Passenger.FlightNumber" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Check In</button>
+            </form>
+        </div>
+    </div>
+</div>

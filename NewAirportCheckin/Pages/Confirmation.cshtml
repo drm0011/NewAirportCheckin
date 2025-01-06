@@ -1,0 +1,17 @@
+﻿@page "{id:int}"
+@model NewAirportCheckin.Pages.ConfirmationModel
+
+@{
+    ViewData["Title"] = "Check-In Successful";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-success">Check-In Successful!</h1>
+    <div class="card shadow mt-4">
+        <div class="card-body text-center">
+            <p><strong>Passenger Name:</strong> @Model.Passenger.PassengerName</p>
+            <p><strong>Flight Number:</strong> @Model.Passenger.FlightNumber</p>
+            <a href="/" class="btn btn-secondary mt-3">Go Back</a>
+        </div>
+    </div>
+</div>
